@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* html{
+            scroll-snap-type: y mandatory;
+        } */
+        .head{
+            display: flex;
+        }
+        body::-webkit-scrollbar{
+            display: none;
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+       
+        .main-container{
+            scroll-snap-type: y mandatory;
+            border: 2px solid red;
+            margin-left: auto;
+            width: 90%;
+        }
+        /* .container{
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        } */
+        .container::-webkit-scrollbar{
+            display: none;
+        }
+        .slides{
+            color: white;
+            scroll-snap-align: start;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            font-size: 30px;
+            
+            justify-content: center;
+        
+        }
+        #sec1{
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            height: 100vh;
+            width: 100%;
+        }
+        #sec1::-webkit-scrollbar{
+            display: none;
+        }
+        #sec2{
+            
+            background-color: pink;
+        }
+        #sec3{
+            
+            
+            background-color: lightblue;
+        }
+        .sections{
+            scroll-snap-align: start;
+            width: 100%;
+            height: 100vh;
+            background-color: coral;
+            display: flex;
+            justify-content: center;
+        }
+
+        /*list */
+        /* .list ul{
+            list-style: none;
+        }
+        .list li{
+            padding: 10px;
+            background-color: lightblue;
+        } */
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="list">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        <div id="main-con" class="main-container">
+            <div id="sec1" class="sections">
+                <div class="container">
+                    <div class="slides" style="background-image: url('img1.jpg');">
+                        <h1>Headings...</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quae eius possimus! Voluptatibus, non possimus.</p>
+                    </div>
+                    <div class="slides" style="background-image: url('img2.jpg');">
+                        <h1>Headings...</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quae eius possimus! Voluptatibus, non possimus.</p>
+                    </div>
+                    <div class="slides" style="background-image: url('img5.jpg');">
+                        <h1>Headings...</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quae eius possimus! Voluptatibus, non possimus.</p>
+                    </div>
+                    <div class="slides" style="background-image: url('img6.jpg');">
+                        <h1>Headings...</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quae eius possimus! Voluptatibus, non possimus.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="sec2" class="sections">
+                <h1>Section 2</h1>
+            </div>
+            <div id="sec3" class="sections">
+                <h1>Section 3</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Vertical Tabs</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body::-webkit-scrollbar{
+            display: none;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+            width: 50px;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: yellow;
+        }
+        .act-li{
+            background-color: goldenrod;
+        }
+        li:hover{
+            background-color: goldenrod;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .content{
+            height: 100vh;
+            border: 2px solid red;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+        .img-div{
+            width: 100%;
+            height: 92%;
+            border: 1px solid blue;
+        }
+       /* #london{
+        overflow-y: scroll;
+       }
+       #paris{
+        overflow-y: scroll;
+       }
+       #tokyo{
+        overflow-y: scroll;
+       } */
+    </style>
+</head>
+<body>
+    <!-- <div class="tabs">
+        <ul>
+            <li id="l" onclick="showCont('london','l')">London</li>
+            <li id="p" onclick="showCont('paris','p')">Paris</li>
+            <li id="t" onclick="showCont('tokyo','t')">Tokyo</li>
+        </ul>
+    </div> -->
+    <div id="london" class="content">
+        <h1>London</h1>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, eos.</h4>
+        <div class="img-div">
+            <img src="img1.jpg"/>
+        </div>
+        <div id="1" class="empty"></div>
+    </div>
+    <div id="paris" class="content">
+        <h1>Paris</h1>
+        <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, modi et labore repellendus officia autem?</h4>
+        <div class="img-div">
+            <img src="img1.jpg"/>
+        </div>
+        <div id="2" class="empty"></div>
+    </div>
+    <div id="tokyo" class="content">
+        <h1>Tokyo</h1>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, suscipit!</h4>
+        <div>
+            <img src="img6.jpg"/>
+        </div class="img-div">
+        <div id="3" class="empty"></div>
+    </div>
+
+
+    <script>
+        // function showCont(country,i){
+        //     let c = document.getElementById(country);
+        //     let b = document.getElementById(i);
+        //     console.log(c);
+        //     console.log(b);
+        //     console.log("clicked");
+        //     $(".content").hide();
+        //     $("li").removeClass("act-li");
+        //     $('#'+country).show();
+        //     $("#"+i).addClass("act-li");
+        // }
+        // $(document).ready(()=>{
+        //     $(".content").hide();
+        //     $("#london").show();
+        //     $("#l").addClass("act-li");
+        // })
+
+        // $("#l").click(()=>{
+        //     console.log("london");
+        //     $(".content").hide();
+        //     $("#london").show();
+        //     document.getElementById("london").scrollIntoView({behavior:"smooth"});
+        // });
+        // $("#p").click(()=>{
+        //     console.log("paris")
+        //     $(".content").hide();
+        //     $("#paris").show();
+        //     document.getElementById("paris").scrollIntoView({behavior:"smooth"});
+        // });
+        // $("#t").click(()=>{
+        //     console.log("tokyo");
+        //     $(".content").hide();
+        //     $("#tokyo").show();
+        //     document.getElementById("tokyo").scrollIntoView({behavior:"smooth"});
+        // });
+    </script>
+</body>
+</html>
